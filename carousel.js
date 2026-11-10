@@ -99,9 +99,63 @@
     });
   }
 
+  function initMobileMenu() {
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeBtn = document.getElementById('mobileMenuClose');
+    const backdrop = document.getElementById('mobileMenuBackdrop');
+    const menuLinks = document.querySelectorAll('.mobile-menu__link, .mobile-menu__cta');
+
+    if (!hamburgerBtn || !mobileMenu) return;
+
+    function openMenu() {
+      mobileMenu.classList.add('is-open');
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      hamburgerBtn.setAttribute('aria-expanded', 'true');
+      hamburgerBtn.setAttribute('aria-label', 'Закрыть меню навигации');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.remove('is-open');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+      hamburgerBtn.setAttribute('aria-label', 'Открыть меню навигации');
+      document.body.style.overflow = '';
+    }
+
+    hamburgerBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.contains('is-open');
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeMenu);
+    }
+
+    if (backdrop) {
+      backdrop.addEventListener('click', closeMenu);
+    }
+
+    menuLinks.forEach((link) => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('is-open')) {
+        closeMenu();
+      }
+    });
+  }
+
   function init() {
     initCarousel();
     initMockupTabs();
+    initMobileMenu();
   }
 
   if (document.readyState === 'loading') {

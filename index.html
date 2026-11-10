@@ -40,9 +40,45 @@
         </ul>
       </nav>
 
-      <a href="https://t.me/sen0215" target="_blank" rel="noopener noreferrer" class="btn btn--secondary header__cta">Telegram ↗</a>
+      <div class="header__actions">
+        <a href="https://t.me/sen0215" target="_blank" rel="noopener noreferrer" class="btn btn--secondary header__cta">Telegram ↗</a>
+        <button type="button" class="hamburger" id="hamburgerBtn" aria-label="Открыть меню навигации" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
     </div>
   </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__backdrop" id="mobileMenuBackdrop"></div>
+    <div class="mobile-menu__panel">
+      <div class="mobile-menu__header">
+        <span class="logo">
+          <span class="logo__bracket">&lt;</span>fullstack<span class="logo__bracket">/&gt;</span>
+        </span>
+        <button type="button" class="mobile-menu__close" id="mobileMenuClose" aria-label="Закрыть меню">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <nav class="mobile-menu__nav" aria-label="Мобильная навигация">
+        <ul class="mobile-menu__list">
+          <li><a href="#stack" class="mobile-menu__link">Стек и навыки</a></li>
+          <li><a href="#projects" class="mobile-menu__link">Проекты</a></li>
+          <li><a href="#contact" class="mobile-menu__link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="mobile-menu__footer">
+        <a href="https://t.me/sen0215" target="_blank" rel="noopener noreferrer" class="btn btn--primary mobile-menu__cta">
+          Telegram (Олег) ↗
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- Main Landmark -->
   <main id="main">
