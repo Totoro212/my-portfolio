@@ -1,4 +1,4 @@
-**
+/**
  * Lightweight, accessible pure vanilla JS Carousel
  * Works in tandem with CSS Scroll Snap (Progressive Enhancement)
  */
