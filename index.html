@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- Security Headers & Directives -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; base-uri 'self'; form-action 'self' mailto:;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  
+  <title>Портфолио Разработчика | HTML &amp; CSS</title>
+  <meta name="description" content="Портфолио веб-разработчика. Современная семантическая вёрстка, адаптивный дизайн, доступность и чистый код на HTML5 и CSS3.">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="header">
+    <div class="container header__container">
+      <a href="#hero" class="logo" aria-label="На главную">
+        <span class="logo__bracket">&lt;</span>dev<span class="logo__slash">/</span><span class="logo__bracket">&gt;</span>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#about" class="nav__link">Обо мне</a></li>
+          <li class="nav__item"><a href="#skills" class="nav__link">Навыки</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__link">Проекты</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="btn btn--secondary header__cta">Связаться</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="container hero__container">
+        <div class="hero__content">
+          <div class="badge">
+            <span class="badge__indicator"></span>
+            <span>Готов к новым проектам</span>
+          </div>
+
+          <h1 class="hero__title">
+            Создаю быстрые, доступные и надёжные сайты
+          </h1>
+
+          <p class="hero__subtitle">
+            Привет! Я веб-разработчик. Специализируюсь на чистой семантической вёрстке, адаптивном дизайне и создании интерфейсов с акцентом на производительность и безопасность.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">Смотреть работы</a>
+            <a href="#contact" class="btn btn--outline">Написать мне</a>
+          </div>
+
+          <div class="hero__highlights">
+            <div class="highlight-item">
+              <span class="highlight-item__number">100%</span>
+              <span class="highlight-item__label">Валидный HTML5/CSS3</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-item__number">A11y</span>
+              <span class="highlight-item__label">Стандарты доступности</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-item__number">Mobile</span>
+              <span class="highlight-item__label">Адаптивность для всех устройств</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="code-card">
+            <div class="code-card__header">
+              <span class="code-card__dot"></span>
+              <span class="code-card__dot"></span>
+              <span class="code-card__dot"></span>
+              <span class="code-card__filename">developer.css</span>
+            </div>
+            <pre class="code-card__body"><code><span class="code-selector">.developer</span> {
+  <span class="code-prop">name</span>: <span class="code-string">"Ваше Имя"</span>;
+  <span class="code-prop">role</span>: <span class="code-string">"Web Developer"</span>;
+  <span class="code-prop">focus</span>: [
+    <span class="code-string">"Semantic HTML"</span>,
+    <span class="code-string">"Modern CSS"</span>,
+    <span class="code-string">"Security Best Practices"</span>
+  ];
+  <span class="code-prop">clean-code</span>: <span class="code-bool">true</span>;
+  <span class="code-prop">responsive</span>: <span class="code-bool">true</span>;
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-header__tag">Информация</span>
+          <h2 class="section-header__title">Обо мне</h2>
+        </header>
+
+        <div class="about__grid">
+          <div class="about__text">
+            <p>
+              Я занимаюсь веб-разработкой, уделяя ключевое внимание архитектуре стилей, семантике разметки и практикам веб-безопасности. 
+            </p>
+            <p>
+              Мой подход — не перегружать интерфейсы избыточными скриптами там, где задачу можно элегантно и производительно решить средствами современного HTML5 и CSS3. Такой подход гарантирует молниеносную загрузку, отличный SEO-рейтинг и доступность для каждого пользователя.
+            </p>
+            <div class="about__features">
+              <div class="feature-item">
+                <div class="feature-item__icon">&#10003;</div>
+                <div>
+                  <strong>Чистый код:</strong> Структурированная архитектура по БЭМ без спагетти-стилей.
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-item__icon">&#10003;</div>
+                <div>
+                  <strong>Безопасность:</strong> Использование безопасных атрибутов внешних ссылок, Content-Security-Policy и отсутствие уязвимостей разметки.
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-item__icon">&#10003;</div>
+                <div>
+                  <strong>Кроссбраузерность:</strong> Корректное отображение в Chrome, Firefox, Safari, Edge и мобильных браузерах.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="about__info-card" aria-label="Краткая сводка">
+            <h3 class="about__info-title">Ключевая информация</h3>
+            <ul class="about__info-list">
+              <li>
+                <span class="info-label">Специализация:</span>
+                <span class="info-value">HTML &amp; CSS Вёрстка</span>
+              </li>
+              <li>
+                <span class="info-label">Методология:</span>
+                <span class="info-value">БЭМ (BEM), Flexbox, CSS Grid</span>
+              </li>
+              <li>
+                <span class="info-label">Формат работы:</span>
+                <span class="info-value">Удалённо / Проектная занятость</span>
+              </li>
+              <li>
+                <span class="info-label">Локация:</span>
+                <span class="info-value">Россия (GMT+3)</span>
+              </li>
+              <li>
+                <span class="info-label">Статус:</span>
+                <span class="info-value text-accent">Открыт к предложениям</span>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-header__tag">Стек</span>
+          <h2 class="section-header__title">Навыки и технологии</h2>
+        </header>
+
+        <div class="skills__grid">
+          <!-- Card 1: HTML5 -->
+          <article class="skill-card">
+            <div class="skill-card__header">
+              <span class="skill-card__tag">Разметка</span>
+              <h3 class="skill-card__title">HTML5 &amp; Семантика</h3>
+            </div>
+            <p class="skill-card__desc">
+              Глубокое понимание семантических тегов, построения логической структуры документа, мета-тегов и микроразметки.
+            </p>
+            <ul class="skill-card__list">
+              <li>Семантическая вёрстка (W3C валидность)</li>
+              <li>Доступность (ARIA, фокус, читалки экранов)</li>
+              <li>SEO-friendly мета-теги и структура заголовков</li>
+              <li>Безопасная работа с формами и ссылками</li>
+            </ul>
+          </article>
+
+          <!-- Card 2: CSS3 -->
+          <article class="skill-card">
+            <div class="skill-card__header">
+              <span class="skill-card__tag">Стили</span>
+              <h3 class="skill-card__title">CSS3 &amp; Анимации</h3>
+            </div>
+            <p class="skill-card__desc">
+              Современные спецификации CSS, адаптивная верстка без лишнего веса, построение масштабируемых сеток.
+            </p>
+            <ul class="skill-card__list">
+              <li>Flexbox и CSS Grid Layout</li>
+              <li>CSS Custom Properties (Переменные)</li>
+              <li>CSS Анимации и Transitions</li>
+              <li>Поддержка темной темы (prefers-color-scheme)</li>
+            </ul>
+          </article>
+
+          <!-- Card 3: Best Practices -->
+          <article class="skill-card">
+            <div class="skill-card__header">
+              <span class="skill-card__tag">Стандарты</span>
+              <h3 class="skill-card__title">Архитектура &amp; Оптимизация</h3>
+            </div>
+            <p class="skill-card__desc">
+              Методологии организации кода и оптимизация скорости работы страниц в браузере.
+            </p>
+            <ul class="skill-card__list">
+              <li>Методология БЭМ (Block, Element, Modifier)</li>
+              <li>Mobile-First подход</li>
+              <li>Минимизация Layout Shift (CLS) и FCP</li>
+              <li>Кроссбраузерное тестирование</li>
+            </ul>
+          </article>
+
+          <!-- Card 4: Tools -->
+          <article class="skill-card">
+            <div class="skill-card__header">
+              <span class="skill-card__tag">Инструменты</span>
+              <h3 class="skill-card__title">Рабочий процесс</h3>
+            </div>
+            <p class="skill-card__desc">
+              Инструменты контроля версий, анализа и экспорта макетов из дизайн-систем.
+            </p>
+            <ul class="skill-card__list">
+              <li>Git, GitHub, ветвление и релизы</li>
+              <li>Figma / Pixel Perfect перенос макетов</li>
+              <li>Chrome DevTools, аудит Lighthouse</li>
+              <li>VS Code, плагины линтинга и форматирования</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-header__tag">Портфолио</span>
+          <h2 class="section-header__title">Выполненные проекты</h2>
+        </header>
+
+        <div class="projects__grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-card__preview">
+              <div class="project-card__mockup">
+                <span class="project-card__label">Corporate Landing</span>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__tags">
+                <span class="badge-tag">HTML5</span>
+                <span class="badge-tag">CSS Grid</span>
+                <span class="badge-tag">БЭМ</span>
+              </div>
+              <h3 class="project-card__title">Корпоративный сайт для IT-компании</h3>
+              <p class="project-card__description">
+                Многостраничный адаптивный интерфейс с кастомной сеткой CSS Grid, плавной прокруткой и темной/светлой темой.
+              </p>
+              <div class="project-card__links">
+                <!-- External links with security attributes -->
+                <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="link-action">
+                  Демо ↗
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-action link-action--muted">
+                  Исходный код (GitHub)
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-card__preview">
+              <div class="project-card__mockup">
+                <span class="project-card__label">E-Commerce Grid</span>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__tags">
+                <span class="badge-tag">Flexbox</span>
+                <span class="badge-tag">CSS Variables</span>
+                <span class="badge-tag">A11y</span>
+              </div>
+              <h3 class="project-card__title">Каталог интернет-магазина</h3>
+              <p class="project-card__description">
+                Каталог товаров с фильтрами, карточками товаров, модальными окнами на чистом CSS и доступной клавиатурной навигацией.
+              </p>
+              <div class="project-card__links">
+                <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="link-action">
+                  Демо ↗
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-action link-action--muted">
+                  Исходный код (GitHub)
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-card__preview">
+              <div class="project-card__mockup">
+                <span class="project-card__label">Dashboard UI</span>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__tags">
+                <span class="badge-tag">HTML5</span>
+                <span class="badge-tag">CSS Keyframes</span>
+                <span class="badge-tag">Responsive</span>
+              </div>
+              <h3 class="project-card__title">Аналитический дашборд</h3>
+              <p class="project-card__description">
+                Интерфейс панели управления с боковым меню, таблицами данных, графиками на чистом CSS и адаптивным перестроением.
+              </p>
+              <div class="project-card__links">
+                <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="link-action">
+                  Демо ↗
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-action link-action--muted">
+                  Исходный код (GitHub)
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-header__tag">Связь</span>
+          <h2 class="section-header__title">Давайте обсудим ваш проект</h2>
+        </header>
+
+        <div class="contact__wrapper">
+          <div class="contact__info">
+            <h3 class="contact__subtitle">Всегда на связи</h3>
+            <p class="contact__text">
+              Если вам нужна качественная вёрстка по макету, аудит существующего кода или вёрстка сайта с нуля — напишите мне любым удобным способом:
+            </p>
+
+            <div class="contact__methods">
+              <a href="mailto:your-email@example.com" class="contact-channel">
+                <span class="contact-channel__icon" aria-hidden="true">&#9993;</span>
+                <div class="contact-channel__details">
+                  <span class="contact-channel__type">Email</span>
+                  <span class="contact-channel__value">your-email@example.com</span>
+                </div>
+              </a>
+
+              <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" class="contact-channel">
+                <span class="contact-channel__icon" aria-hidden="true">&#10148;</span>
+                <div class="contact-channel__details">
+                  <span class="contact-channel__type">Telegram</span>
+                  <span class="contact-channel__value">@yourusername</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="contact-channel">
+                <span class="contact-channel__icon" aria-hidden="true">&#9881;</span>
+                <div class="contact-channel__details">
+                  <span class="contact-channel__type">GitHub</span>
+                  <span class="contact-channel__value">github.com/yourusername</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Safe Contact Form: Standard mailto or backend action placeholder without unsafe scripts -->
+          <form class="contact__form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <h3 class="contact__subtitle">Быстрое сообщение</h3>
+            
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Ваше имя</label>
+              <input type="text" id="contact-name" name="name" class="form-input" placeholder="Иван Иванов" required autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Ваш Email</label>
+              <input type="email" id="contact-email" name="email" class="form-input" placeholder="example@domain.com" required autocomplete="email">
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Сообщение / Задача</label>
+              <textarea id="contact-message" name="message" class="form-textarea" rows="4" placeholder="Расскажите о проекте или задаче..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full">Отправить письмо</button>
+            <p class="form-note">
+              Отправка через почтовую программу по умолчанию без передачи данных третьим лицам.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__copy">
+        &copy; <span id="year">2026</span> Веб-разработчик. Сделано с любовью на чистом HTML &amp; CSS.
+      </div>
+      <div class="footer__links">
+        <a href="#hero" class="footer__link">Наверх &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+
