@@ -7,19 +7,22 @@
   <meta name="color-scheme" content="light">
 
   <!-- Security Headers & Directives -->
-  <!-- Strict Content-Security-Policy: Zero external inline scripts, only local styles and secure mailto/self actions -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; base-uri 'self'; form-action 'self' mailto:;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; base-uri 'self'; form-action 'self' mailto:;">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
-  <title>Разработка веб-приложений под бизнес-задачи | Fullstack</title>
-  <meta name="description" content="Создаю веб-приложения под ключ: от аудита и проектирования до запуска и поддержки. Помогаю бизнесу автоматизировать процессы, ускорить системы и запустить MVP.">
+  <title>Fullstack-разработчик: Laravel &amp; PostgreSQL | Портфолио</title>
+  <meta name="description" content="Разработка надёжных бэкенд-систем, баз данных PostgreSQL и веб-приложений на Laravel. Отказоустойчивость, чистая архитектура, решение бизнес-задач.">
 
-  <!-- Stylesheet -->
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fullstack-разработчик: Laravel &amp; PostgreSQL">
+  <meta property="og:description" content="Проектирование баз данных PostgreSQL, чистый бэкенд на Laravel и быстрые веб-приложения под бизнес-задачи.">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Accessible Skip Link for Keyboard Navigation -->
+  <!-- Accessible Skip Link -->
   <a href="#main" class="skip-link">Перейти к основному содержимому</a>
 
   <!-- Header / Navigation -->
@@ -27,21 +30,17 @@
     <div class="container header__container">
       <a href="#hero" class="logo" aria-label="Главная страница портфолио">
         <span class="logo__bracket">&lt;</span>fullstack<span class="logo__bracket">/&gt;</span>
-        <span class="logo__dot" aria-hidden="true">&#9679;</span>
       </a>
 
       <nav class="nav" aria-label="Основная навигация">
         <ul class="nav__list">
-          <li class="nav__item"><a href="#about" class="nav__link">Обо мне</a></li>
-          <li class="nav__item"><a href="#services" class="nav__link">Услуги</a></li>
-          <li class="nav__item"><a href="#skills" class="nav__link">Инструменты</a></li>
-          <li class="nav__item"><a href="#projects" class="nav__link">Кейсы</a></li>
-          <li class="nav__item"><a href="#workflow" class="nav__link">Процесс</a></li>
+          <li class="nav__item"><a href="#stack" class="nav__link">Стек и навыки</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__link">Проекты</a></li>
           <li class="nav__item"><a href="#contact" class="nav__link">Контакты</a></li>
         </ul>
       </nav>
 
-      <a href="#contact" class="btn btn--secondary header__cta">Связаться</a>
+      <a href="https://t.me/sen0215" target="_blank" rel="noopener noreferrer" class="btn btn--secondary header__cta">Telegram ↗</a>
     </div>
   </header>
 
@@ -52,36 +51,32 @@
     <section id="hero" class="hero section">
       <div class="container hero__container">
         <div class="hero__content">
-          <div class="status-badge" role="status">
-            <span class="status-badge__dot" aria-hidden="true"></span>
-            <span>Открыт для аудитов и проектов</span>
-          </div>
 
           <h1 class="hero__title">
-            Создаю веб-приложения, которые <span class="hero__title-accent">решают бизнес-задачи</span>
+            Fullstack-разработчик: <span class="hero__title-accent">Laravel &amp; PostgreSQL</span>
           </h1>
 
           <p class="hero__subtitle">
-            От аудита существующей системы до запуска нового сервиса под ключ. Помогаю бизнесу автоматизировать процессы, ускорить работу и снизить расходы на поддержку.
+            Разрабатываю веб-приложения на Laravel, проектирую базы данных PostgreSQL. Чистая архитектура без лишней сложности.
           </p>
 
           <div class="hero__actions">
-            <a href="#services" class="btn btn--primary">Форматы работы</a>
-            <a href="#projects" class="btn btn--outline">Смотреть кейсы</a>
+            <a href="#projects" class="btn btn--primary">Смотреть проекты</a>
+            <a href="#contact" class="btn btn--outline">Связаться со мной</a>
           </div>
 
           <div class="hero__highlights">
             <div class="highlight-item">
-              <span class="highlight-item__value">Что делаю</span>
-              <span class="highlight-item__label">Веб-приложения, API, автоматизация</span>
+              <span class="highlight-item__value">Бэкенд</span>
+              <span class="highlight-item__label">Laravel, PHP</span>
             </div>
             <div class="highlight-item">
-              <span class="highlight-item__value">Как работаю</span>
-              <span class="highlight-item__label">Фиксированный скоуп и сроки</span>
+              <span class="highlight-item__value">Базы данных</span>
+              <span class="highlight-item__label">PostgreSQL</span>
             </div>
             <div class="highlight-item">
-              <span class="highlight-item__value">Результат</span>
-              <span class="highlight-item__label">Работающая система, а не отчёт о часах</span>
+              <span class="highlight-item__value">Фронтенд</span>
+              <span class="highlight-item__label">Blade &amp; Tailwindcss</span>
             </div>
           </div>
         </div>
@@ -92,532 +87,315 @@
               <span class="code-card__dot code-card__dot--red"></span>
               <span class="code-card__dot code-card__dot--yellow"></span>
               <span class="code-card__dot code-card__dot--green"></span>
-              <span class="code-card__filename">ProjectPipeline.workflow</span>
+              <span class="code-card__filename">DeveloperProfile.php</span>
             </div>
-            <pre class="code-card__body"><code><span class="token-selector">pipeline</span> <span class="token-string">"WebApplication"</span> {
-  <span class="token-prop">01_audit</span>: <span class="token-string">"Диагностика и узкие места"</span>;
-  <span class="token-prop">02_design</span>: <span class="token-string">"Архитектура и схема данных"</span>;
-  <span class="token-prop">03_build</span>: <span class="token-string">"Бизнес-логика, API, интерфейс"</span>;
-  <span class="token-prop">04_launch</span>: <span class="token-string">"Безопасный деплой и сдача"</span>;
-  <span class="token-prop">05_sla</span>: <span class="token-string">"Поддержка и масштабирование"</span>;
-
-  <span class="token-keyword">guarantee</span>: <span class="token-string">"Фиксированный срок и результат"</span>;
-}</code></pre>
+            <pre class="code-card__body"><code><span class="token-keyword">return</span> [
+  <span class="token-string">'role'</span>      =&gt; <span class="token-string">'Fullstack Developer'</span>,
+  <span class="token-string">'backend'</span>   =&gt; [<span class="token-string">'Laravel 11'</span>, <span class="token-string">'PHP 8.3'</span>, <span class="token-string">'REST API'</span>],
+  <span class="token-string">'database'</span>  =&gt; [<span class="token-string">'PostgreSQL'</span>, <span class="token-string">'ACID'</span>, <span class="token-string">'Indexes'</span>],
+  <span class="token-string">'frontend'</span>  =&gt; [<span class="token-string">'Blade'</span>, <span class="token-string">'Tailwind CSS'</span>, <span class="token-string">'HTML5'</span>],
+  <span class="token-string">'status'</span>    =&gt; <span class="token-selector">WorkStatus</span>::<span class="token-prop">AvailableForHire</span>,
+];</code></pre>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about section">
+    <!-- Unified Stack & Expertise Section (No Duplicates) -->
+    <section id="stack" class="competencies section">
       <div class="container">
         <header class="section-header">
-          <span class="section-header__tag">Обо мне</span>
-          <h2 class="section-header__title">Инженерный подход и польза для бизнеса</h2>
+          <span class="section-header__tag">Экспертиза</span>
+          <h2 class="section-header__title">Стек и ключевые навыки</h2>
           <p class="section-header__desc">
-            Разрабатываю веб-решения, которые экономят бюджет, ускоряют операции и стабильно работают под нагрузкой.
+            Технологии, которые использую в коммерческой разработке для создания масштабируемых и быстрых решений.
           </p>
         </header>
 
-        <div class="about__grid">
-          <div class="about__text">
-            <p class="about__lead">
-              Я создаю веб-приложения, которые закрывают конкретную бизнес-задачу: автоматизируют рутину, ускоряют операции, снимают нагрузку с команды. Технологии подбираю под задачу, а не наоборот.
+        <div class="competencies__grid">
+          <!-- Card 1: Backend & Architecture -->
+          <article class="comp-card">
+            <span class="comp-card__num">01</span>
+            <h3 class="comp-card__title">Бэкенд на Laravel &amp; PHP 8</h3>
+            <p class="comp-card__desc">
+              Разработка надёжной серверной архитектуры, бизнес-логики и защищённых API.
             </p>
-            <p>
-              Мой приоритет — чтобы система работала быстро, данные оставались в полной безопасности, а поддержка не превращалась в бесконечный технический долг.
-            </p>
-
-            <div class="about__checklist">
-              <div class="check-item">
-                <span class="check-item__icon" aria-hidden="true">&#10003;</span>
-                <div>
-                  <strong>Система работает быстро:</strong> нахожу и устраняю узкие места в базе данных и запросах (PostgreSQL), чтобы отчёты и страницы открывались за секунды.
-                </div>
-              </div>
-              <div class="check-item">
-                <span class="check-item__icon" aria-hidden="true">&#10003;</span>
-                <div>
-                  <strong>Автоматизация рутины:</strong> выношу тяжёлые операции в фоновые процессы, подключаю API, CRM и Telegram-ботов (Laravel), чтобы команда не делала работу вручную.
-                </div>
-              </div>
-              <div class="check-item">
-                <span class="check-item__icon" aria-hidden="true">&#10003;</span>
-                <div>
-                  <strong>Безопасность по умолчанию:</strong> защита от типовых атак (OWASP), контроль доступа и безопасные транзакции — чтобы данные клиентов оставались в целости.
-                </div>
-              </div>
-              <div class="check-item">
-                <span class="check-item__icon" aria-hidden="true">&#10003;</span>
-                <div>
-                  <strong>Чистый интерфейс:</strong> быстрый адаптивный фронтенд (HTML5/CSS3) без лишних тяжёлых библиотек, который не тормозит на смартфонах и даёт высокую конверсию.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <aside class="about__info-card" aria-label="Сводка квалификации">
-            <h3 class="about__info-title">Ключевая сводка</h3>
-            <ul class="about__info-list">
-              <li>
-                <span class="info-label">Профиль:</span>
-                <span class="info-value">Разработка веб-приложений</span>
-              </li>
-              <li>
-                <span class="info-label">Формат:</span>
-                <span class="info-value">Аудит / Проект / SLA</span>
-              </li>
-              <li>
-                <span class="info-label">Оплата:</span>
-                <span class="info-value">Поэтапно (50/50)</span>
-              </li>
-              <li>
-                <span class="info-label">Основной стек:</span>
-                <span class="info-value">Laravel, PostgreSQL</span>
-              </li>
-              <li>
-                <span class="info-label">Безопасность:</span>
-                <span class="info-value">OWASP, ACID, CSP</span>
-              </li>
-              <li>
-                <span class="info-label">Статус:</span>
-                <span class="info-value info-value--status">Открыт к проектам</span>
-              </li>
-            </ul>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services / Productized Packages Section -->
-    <section id="services" class="services section">
-      <div class="container">
-        <header class="section-header">
-          <span class="section-header__tag">Услуги</span>
-          <h2 class="section-header__title">Форматы сотрудничества</h2>
-          <p class="section-header__desc">
-            Продуктизированные пакеты с понятным результатом, чёткими сроками и фиксированным бюджетом без скрытых переплат.
-          </p>
-        </header>
-
-        <div class="services__grid">
-          <!-- Tier 1: Diagnosis & Audit -->
-          <article class="service-card">
-            <span class="service-card__part">Часть 1 &bull; Входной билет</span>
-            <h3 class="service-card__title">Технический аудит &amp; Roadmap</h3>
-            <p class="service-card__desc">
-              Глубокая диагностика текущего проекта: поиск узких мест производительности, проверка безопасности и аудит базы данных.
-            </p>
-            <ul class="service-card__list">
-              <li>Анализ медленных запросов в PostgreSQL (EXPLAIN ANALYZE)</li>
-              <li>Проверка кода Laravel по стандартам безопасности OWASP Top 10</li>
-              <li>Оценка архитектуры и выявление технического долга</li>
-              <li>Подробный отчёт с пошаговым планом оптимизации (Roadmap)</li>
-            </ul>
-            <div class="service-card__footer">
-              <div class="service-card__meta">
-                <span class="service-card__format">Срок: 2–4 рабочих дня</span>
-                <span class="service-card__badge">Фикс. бюджет</span>
-              </div>
-              <a href="#contact" class="btn btn--outline btn--full">Заказать аудит ↗</a>
-            </div>
-          </article>
-
-          <!-- Tier 2: Implementation (Featured) -->
-          <article class="service-card service-card--featured">
-            <span class="service-card__badge-popular">Популярный выбор</span>
-            <span class="service-card__part">Часть 2 &bull; Основной проект</span>
-            <h3 class="service-card__title">Разработка под ключ / MVP</h3>
-            <p class="service-card__desc">
-              Создание полноценного веб-сервиса, API или системы автоматизации с чётким результатом и фиксированным сроком сдачи.
-            </p>
-            <ul class="service-card__list">
-              <li>Разработка веб-приложения или сервиса под вашу задачу с фиксированным сроком и результатом</li>
-              <li>Проектирование надёжной архитектуры и схемы БД (PostgreSQL) с транзакциями ACID</li>
-              <li>Реализация бэкенд-логики, очередей и интеграций (Laravel)</li>
-              <li>Подключение платёжных шлюзов, CRM и Telegram-ботов</li>
-              <li>Чистый адаптивный интерфейс (HTML5/CSS3/Blade)</li>
-              <li>Подготовка серверного окружения и безопасный запуск</li>
-            </ul>
-            <div class="service-card__footer">
-              <div class="service-card__meta">
-                <span class="service-card__format">Срок: от 2 недель</span>
-                <span class="service-card__badge">Предоплата 50/50</span>
-              </div>
-              <a href="#contact" class="btn btn--primary btn--full">Обсудить проект ↗</a>
-            </div>
-          </article>
-
-          <!-- Tier 3: Retainer / Support -->
-          <article class="service-card">
-            <span class="service-card__part">Часть 3 &bull; Подписка</span>
-            <h3 class="service-card__title">Поддержка &amp; Безопасность</h3>
-            <p class="service-card__desc">
-              Ежемесячное сопровождение проекта: мониторинг стабильности, резервное копирование, патчи безопасности и оперативная доработка.
-            </p>
-            <ul class="service-card__list">
-              <li>Автоматические бэкапы PostgreSQL и проверка целостности</li>
-              <li>Обновления безопасности Laravel и внешних пакетов</li>
-              <li>Фиксированное время реакции на инциденты (SLA)</li>
-              <li>Включённый пакет часов на исправление багов и новые фичи</li>
-            </ul>
-            <div class="service-card__footer">
-              <div class="service-card__meta">
-                <span class="service-card__format">Ежемесячный ретейнер</span>
-                <span class="service-card__badge">Фиксированный SLA</span>
-              </div>
-              <a href="#contact" class="btn btn--outline btn--full">Подключить тариф ↗</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
-      <div class="container">
-        <header class="section-header">
-          <span class="section-header__tag">Инструменты</span>
-          <h2 class="section-header__title">Инструменты под задачу</h2>
-          <p class="section-header__desc">
-            Технологии — это инструменты. Важнее то, какую задачу они решают. Ниже — то, что я использую в работе.
-          </p>
-        </header>
-
-        <div class="skills__grid">
-          <!-- Card 1: Backend / Laravel -->
-          <article class="skill-card">
-            <span class="skill-card__tag">Backend</span>
-            <h3 class="skill-card__title">Laravel &amp; PHP 8</h3>
-            <p class="skill-card__desc">
-              Бэкенд, который держит нагрузку: бизнес-логика, API, фоновые процессы и интеграции.
-            </p>
-            <ul class="skill-card__list">
+            <ul class="comp-card__list">
               <li>Архитектура MVC, Service Layer, Form Requests</li>
-              <li>Eloquent ORM, Relationships, транзакции</li>
-              <li>REST API, API Resources, Sanctum-токены</li>
-              <li>Queues, Jobs, Events, Task Scheduling (Cron)</li>
+              <li>Проектирование REST API</li>
+              <li>Асинхронные очереди (Queues, Jobs) для фоновых задач</li>
             </ul>
           </article>
 
-          <!-- Card 2: Database / PostgreSQL -->
-          <article class="skill-card">
-            <span class="skill-card__tag">Database</span>
-            <h3 class="skill-card__title">PostgreSQL</h3>
-            <p class="skill-card__desc">
-              Проектирование реляционных баз данных с защитой целостности и быстрыми выборками.
+          <!-- Card 2: Relational Databases & PostgreSQL -->
+          <article class="comp-card">
+            <span class="comp-card__num">02</span>
+            <h3 class="comp-card__title">База данных PostgreSQL</h3>
+            <p class="comp-card__desc">
+              Проектирование реляционных схем данных с гарантией целостности.
             </p>
-            <ul class="skill-card__list">
-              <li>Реляционное моделирование и миграции</li>
-              <li>Транзакции с соблюдением требований ACID</li>
-              <li>Индексы (B-Tree, GIN), анализ через EXPLAIN</li>
-              <li>Оптимизация сложных выборок, агрегация, JSONB</li>
+            <ul class="comp-card__list">
+              <li>Реляционное моделирование, внешние ключи, миграции</li>
+              <li>Составные индексы</li>
+              <li>Безопасные транзакции и предотвращение блокировок таблиц</li>
             </ul>
           </article>
 
-          <!-- Card 3: Frontend -->
-          <article class="skill-card">
-            <span class="skill-card__tag">Frontend</span>
-            <h3 class="skill-card__title">HTML5, CSS3 &amp; Blade</h3>
-            <p class="skill-card__desc">
-              Чистая семантическая вёрстка и лёгкие интерфейсы, органично работающие с бэкендом.
+          <!-- Card 3: Frontend, Security & Ops -->
+          <article class="comp-card">
+            <span class="comp-card__num">03</span>
+            <h3 class="comp-card__title">Фронтенд, Безопасность</h3>
+            <p class="comp-card__desc">
+              Чистый интерфейс без громоздких фреймворков и надёжная инфраструктура.
             </p>
-            <ul class="skill-card__list">
-              <li>Семантическая вёрстка по стандартам W3C</li>
-              <li>Современный адаптивный CSS (Grid, Flexbox)</li>
-              <li>Шаблонизация Blade (компоненты, layouts)</li>
-              <li>Доступность (A11y) и оптимизация Core Web Vitals</li>
-            </ul>
-          </article>
-
-          <!-- Card 4: Security & Integrations -->
-          <article class="skill-card">
-            <span class="skill-card__tag">Security &amp; Ops</span>
-            <h3 class="skill-card__title">Безопасность &amp; Интеграции</h3>
-            <p class="skill-card__desc">
-              Защита приложений по рекомендациям OWASP и интеграция внешних сервисов.
-            </p>
-            <ul class="skill-card__list">
-              <li>Защита от SQL-инъекций, CSRF, XSS, Rate Limiting</li>
-              <li>Интеграция платёжных систем, CRM и Telegram API</li>
-              <li>Git, GitHub, версионирование и релизы</li>
-              <li>Postman, тестирование эндпоинтов, Docker</li>
+            <ul class="comp-card__list">
+              <li>Шаблонизация Blade (переиспользуемые компоненты)</li>
+              <li>Безопасность OWASP: защита от SQLi, CSRF, XSS</li>
+              <li>Контроль версий Git</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section (Business-Driven Cases) -->
+    <!-- Projects Section -->
     <section id="projects" class="projects section">
       <div class="container">
         <header class="section-header">
-          <span class="section-header__tag">Кейсы</span>
-          <h2 class="section-header__title">Решённые задачи и результаты</h2>
+          <span class="section-header__tag">Портфолио</span>
+          <h2 class="section-header__title">Реализованные проекты</h2>
           <p class="section-header__desc">
-            Не просто код в репозитории, а измеримый результат для бизнеса: ускорение операций, снижение нагрузки и рост конверсии.
+            Системы автоматизации, складской учёт, логистика и веб-сервисы с кастомными панелями управления.
           </p>
         </header>
 
-        <div class="projects__grid">
-          <!-- Case 1 -->
-          <article class="project-card">
+        <!-- Projects Carousel -->
+        <div class="carousel" role="region" aria-roledescription="карусель" aria-label="Реализованные проекты">
+          <div class="carousel__track" id="projectsTrack" tabindex="0">
+            <!-- Case 1: WMS -->
+            <article class="project-card carousel__slide">
+              <div class="project-card__preview">
+                <div class="project-card__mockup">
+                  <div class="mockup-topbar">
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-title">Склад QR</span>
+                    <div class="mockup-tabs" role="tablist" aria-label="Скриншоты Склад QR">
+                      <button type="button" class="mockup-tab is-active" data-src="assets/wms-landing.jpg" data-alt="Главная страница системы учёта Склад QR">Главная</button>
+                      <button type="button" class="mockup-tab" data-src="assets/wms-dashboard.png" data-alt="Панель обзора склада и остатков товаров">Дашборд</button>
+                      <button type="button" class="mockup-tab" data-src="assets/wms-scanner.png" data-alt="QR-сканер товаров через камеру устройства">Сканер</button>
+                      <button type="button" class="mockup-tab" data-src="assets/wms-operations.png" data-alt="Журнал операций и движения номенклатуры">Операции</button>
+                    </div>
+                  </div>
+                  <a href="assets/wms-landing.jpg" target="_blank" rel="noopener noreferrer" class="mockup-image" title="Нажмите, чтобы открыть скриншот в полном размере">
+                    <img src="assets/wms-landing.jpg" alt="Главная страница системы учёта Склад QR" loading="lazy" decoding="async">
+                    <span class="mockup-zoom-badge" aria-hidden="true">&#128269; Открыть оригинал</span>
+                  </a>
+                </div>
+              </div>
+              <div class="project-card__content">
+                <h3 class="project-card__title">Склад QR: Система складского учёта и маркировки</h3>
+                
+                <div class="case-metric">
+                  <span class="case-metric__icon" aria-hidden="true">&#9889;</span>
+                  <span>QR-сканер камерой &bull; Движение товаров &bull; Аналитика остатков</span>
+                </div>
+
+                <div class="project-card__case-details">
+                  <div class="case-row">
+                    <strong>Задача:</strong>
+                    <span>Упорядочить учёт товаров по категориям и ускорить складские операции без дорогостоящих терминалов сбора данных.</span>
+                  </div>
+                  <div class="case-row">
+                    <strong>Решение:</strong>
+                    <span>Веб-сервис с генерацией уникальных QR-кодов, встроенным браузерным сканером через камеру смартфона, журналом приходов/расходов и оповещениями о нехватке остатков.</span>
+                  </div>
+                  <div class="case-row">
+                    <strong>Результат:</strong>
+                    <span>Быстрая инвентаризация без закупки спец-оборудования, моментальный переход к карточке товара и исключение пересортицы.</span>
+                  </div>
+                </div>
+
+                <div class="project-card__links">
+                  <span class="project-card__nda-badge">📦 Склад QR &bull; Веб-сервис</span>
+                </div>
+              </div>
+            </article>
+
+          <!-- Case 2: DMS -->
+          <article class="project-card carousel__slide">
             <div class="project-card__preview">
               <div class="project-card__mockup">
                 <div class="mockup-topbar">
                   <span class="mockup-dot"></span>
                   <span class="mockup-dot"></span>
                   <span class="mockup-dot"></span>
+                  <span class="mockup-title">DMS Logistics</span>
+                  <div class="mockup-tabs" role="tablist" aria-label="Скриншоты DMS Logistics">
+                    <button type="button" class="mockup-tab is-active" data-src="assets/dms-order.png" data-alt="Карточка заказа DMS Logistics и управление доставкой">Заказ</button>
+                    <button type="button" class="mockup-tab" data-src="assets/dms-dashboard.png" data-alt="Панель управления и статистика по районам DMS Logistics">Дашборд</button>
+                    <button type="button" class="mockup-tab" data-src="assets/dms-modal.png" data-alt="Форма добавления нового клиента и заказа">Создание</button>
+                    <button type="button" class="mockup-tab" data-src="assets/dms-auth.png" data-alt="Экран входа в систему DMS Logistics">Вход</button>
+                  </div>
                 </div>
-                <div class="mockup-body">
-                  <span>CRM &amp; Database Optimization</span>
-                </div>
+                <a href="assets/dms-order.png" target="_blank" rel="noopener noreferrer" class="mockup-image" title="Нажмите, чтобы открыть скриншот в полном размере">
+                  <img src="assets/dms-order.png" alt="Карточка заказа DMS Logistics и управление доставкой" loading="lazy" decoding="async">
+                  <span class="mockup-zoom-badge" aria-hidden="true">&#128269; Открыть оригинал</span>
+                </a>
               </div>
             </div>
             <div class="project-card__content">
-              <div class="project-card__tags">
-                <span class="tag-pill">Laravel</span>
-                <span class="tag-pill">PostgreSQL</span>
-                <span class="tag-pill">Queues</span>
-              </div>
-              <h3 class="project-card__title">Оптимизация CRM и базы данных PostgreSQL</h3>
-              
+              <h3 class="project-card__title">DMS Logistics: Сервис управления доставкой</h3>
+
               <div class="case-metric">
                 <span class="case-metric__icon" aria-hidden="true">&#9889;</span>
-                <span>Ускорение отчётов в 8.5 раз &bull; −45% CPU</span>
+                <span>Статусы в реальном времени &bull; Карты &bull; Учёт по районам</span>
               </div>
 
               <div class="project-card__case-details">
                 <div class="case-row">
-                  <strong>Проблема:</strong>
-                  <span>При 50k+ записей аналитические выборки висели до 18 секунд, перегружая сервер базы данных.</span>
+                  <strong>Задача:</strong>
+                  <span>Автоматизировать доставку: быстрое заведение заказов, распределение по районам города и оперативный контроль выполнения курьерами.</span>
                 </div>
                 <div class="case-row">
                   <strong>Решение:</strong>
-                  <span>Рефакторинг SQL-запросов, добавление составных индексов B-Tree и перенос тяжёлых расчётов в очереди Laravel.</span>
+                  <span>Веб-сервис со сводной статистикой, карточкой клиента с быстрым переходом в Яндекс/Google Карты, телефонией, сменой статуса («В пути» &rarr; «Доставлено») и учётом сумм.</span>
                 </div>
                 <div class="case-row">
                   <strong>Результат:</strong>
-                  <span>Время отклика снизилось до 1.5 сек, устранены падения сервера и сэкономлен бюджет на апгрейд хостинга.</span>
+                  <span>Прозрачный мониторинг доставок в реальном времени, исключение потерь заказов и ускорение работы курьеров.</span>
                 </div>
               </div>
 
               <div class="project-card__links">
-                <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="link-action">
-                  Кейс подробно ↗
-                </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-action link-action--muted">
-                  Репозиторий GitHub ↗
-                </a>
+                <span class="project-card__nda-badge">🚚 DMS Logistics &bull; Веб-сервис</span>
               </div>
             </div>
           </article>
 
-          <!-- Case 2 -->
-          <article class="project-card">
+          <!-- Case 3: Artist Portfolio with Admin -->
+          <article class="project-card carousel__slide">
             <div class="project-card__preview">
               <div class="project-card__mockup">
                 <div class="mockup-topbar">
                   <span class="mockup-dot"></span>
                   <span class="mockup-dot"></span>
                   <span class="mockup-dot"></span>
+                  <span class="mockup-title">ANSTK</span>
+                  <div class="mockup-tabs" role="tablist" aria-label="Скриншоты проекта">
+                    <button type="button" class="mockup-tab is-active" data-src="assets/anstk-admin.png" data-title="ANSTK &bull; Админ-панель" data-alt="Админ-панель каталога картин ANSTK">Админка</button>
+                    <button type="button" class="mockup-tab" data-src="assets/anstk-public.jpg" data-title="ANSTK &bull; Витрина" data-alt="Публичная галерея художника ANSTK">Витрина</button>
+                  </div>
                 </div>
-                <div class="mockup-body">
-                  <span>REST API &amp; Automation</span>
-                </div>
+                <a href="assets/anstk-admin.png" target="_blank" rel="noopener noreferrer" class="mockup-image" title="Нажмите, чтобы открыть скриншот в полном размере">
+                  <img src="assets/anstk-admin.png" alt="Админ-панель каталога картин ANSTK" loading="lazy" decoding="async">
+                  <span class="mockup-zoom-badge" aria-hidden="true">&#128269; Открыть оригинал</span>
+                </a>
               </div>
             </div>
             <div class="project-card__content">
-              <div class="project-card__tags">
-                <span class="tag-pill">Laravel 11</span>
-                <span class="tag-pill">Sanctum</span>
-                <span class="tag-pill">Telegram API</span>
-              </div>
-              <h3 class="project-card__title">API для автоматизации заказов и уведомлений</h3>
+              <h3 class="project-card__title">ANSTK: Галерея художника и кастомная CMS</h3>
 
               <div class="case-metric">
                 <span class="case-metric__icon" aria-hidden="true">&#9889;</span>
-                <span>10,000+ заявок/день &bull; 0 потерянных лидов</span>
+                <span>Drag-and-drop порядок &bull; Избранное &bull; 3 категории</span>
               </div>
 
               <div class="project-card__case-details">
                 <div class="case-row">
-                  <strong>Проблема:</strong>
-                  <span>Менеджеры вручную переносили лиды из форм в CRM, из-за чего клиенты ждали ответа до 2 часов.</span>
+                  <strong>Задача:</strong>
+                  <span>Разработать сайт-галерею и систему управления (CMS), чтобы автор мог автономно вести каталог работ и настраивать витрину.</span>
                 </div>
                 <div class="case-row">
                   <strong>Решение:</strong>
-                  <span>Разработка высокопроизводительного REST API с токенизацией, валидацией FormRequest и вебхуками в Telegram.</span>
+                  <span>Публичная витрина и защищённая админка: интерактивная сортировка картин перетаскиванием (drag-and-drop), блок «Избранное на главной», учёт характеристик (холст/масло, размеры, год) и CRUD категорий.</span>
                 </div>
                 <div class="case-row">
                   <strong>Результат:</strong>
-                  <span>Время фиксации заявки сократилось до 3 секунд, автоматизировано 90% рутины менеджеров.</span>
+                  <span>Эстетичный сайт и удобная панель управления, полностью закрывшая задачу автора без привлечения разработчика.</span>
                 </div>
               </div>
 
               <div class="project-card__links">
-                <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="link-action">
-                  Документация API ↗
-                </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-action link-action--muted">
-                  Репозиторий GitHub ↗
-                </a>
+                <span class="project-card__nda-badge">🎨 Веб-сервис &bull; ANSTK CMS</span>
               </div>
             </div>
           </article>
 
-          <!-- Case 3 -->
-          <article class="project-card">
+          <!-- Case 4: Fitness Workout App -->
+          <article class="project-card carousel__slide">
             <div class="project-card__preview">
               <div class="project-card__mockup">
                 <div class="mockup-topbar">
                   <span class="mockup-dot"></span>
                   <span class="mockup-dot"></span>
                   <span class="mockup-dot"></span>
+                  <span class="mockup-title">ARISE</span>
+                  <div class="mockup-tabs" role="tablist" aria-label="Скриншоты ARISE">
+                    <button type="button" class="mockup-tab is-active" data-src="assets/arise-home.png" data-alt="Главный экран запуска системы ARISE">Главная</button>
+                    <button type="button" class="mockup-tab" data-src="assets/arise-workout.jpg" data-alt="Экран активной тренировки PULL в приложении ARISE">Тренировка</button>
+                  </div>
                 </div>
-                <div class="mockup-body">
-                  <span>E-Commerce Speed &amp; Conversion</span>
-                </div>
+                <a href="assets/arise-workout.jpg" target="_blank" rel="noopener noreferrer" class="mockup-image mockup-image--mobile" title="Нажмите, чтобы открыть скриншот в полном размере">
+                  <img src="assets/arise-workout.jpg" alt="Экран активной тренировки PULL в приложении ARISE" loading="lazy" decoding="async">
+                  <span class="mockup-zoom-badge" aria-hidden="true">&#128269; Открыть оригинал</span>
+                </a>
               </div>
             </div>
             <div class="project-card__content">
-              <div class="project-card__tags">
-                <span class="tag-pill">PostgreSQL</span>
-                <span class="tag-pill">HTML5</span>
-                <span class="tag-pill">CSS Grid</span>
-              </div>
-              <h3 class="project-card__title">Каталог товаров с быстрой фильтрацией</h3>
+              <h3 class="project-card__title">ARISE: Трекер программ тренировок и прогресса</h3>
 
               <div class="case-metric">
                 <span class="case-metric__icon" aria-hidden="true">&#9889;</span>
-                <span>Загрузка &lt; 0.9 сек &bull; +28% к конверсии</span>
+                <span>Программы (PULL/PUSH) &bull; Учёт весов и RIR &bull; Mobile-First</span>
               </div>
 
               <div class="project-card__case-details">
                 <div class="case-row">
-                  <strong>Проблема:</strong>
-                  <span>Старый каталог на тяжёлом скриптовом конструкторе открывался 6+ секунд на смартфонах с высоким оттоком.</span>
+                  <strong>Задача:</strong>
+                  <span>Разработать персональное мобильное веб-приложение для ведения программ тренировок, контроля сетов и оперативной фиксации результатов в зале.</span>
                 </div>
                 <div class="case-row">
                   <strong>Решение:</strong>
-                  <span>Перевод на чистый семантический HTML5/CSS3 без лишних библиотек + быстрая фильтрация по индексам PostgreSQL.</span>
+                  <span>Mobile-first интерфейс для смартфонов: списки упражнений по сплитам, учёт рабочих весов и RIR (повторений в запасе), отметка выполнения и смена тренировочных планов.</span>
                 </div>
                 <div class="case-row">
                   <strong>Результат:</strong>
-                  <span>100/100 в Google Lighthouse, мгновенная работа на мобильных и рост конверсии в заказ на 28%.</span>
+                  <span>Быстрый автономный трекер под рукой на тренировке, закрывающий персональные спортивные задачи без платных сервисов.</span>
                 </div>
               </div>
 
               <div class="project-card__links">
-                <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="link-action">
-                  Демо витрины ↗
-                </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-action link-action--muted">
-                  Репозиторий GitHub ↗
-                </a>
+                <span class="project-card__nda-badge">🏋️ ARISE &bull; Mobile Web App</span>
               </div>
             </div>
           </article>
         </div>
-      </div>
-    </section>
 
-    <!-- Workflow / Principles Section -->
-    <section id="workflow" class="workflow section">
-      <div class="container">
-        <header class="section-header">
-          <span class="section-header__tag">Процесс</span>
-          <h2 class="section-header__title">Как строится работа</h2>
-          <p class="section-header__desc">
-            Прозрачный цикл разработки без сюрпризов, со срывом сроков или раздуванием сметы.
-          </p>
-        </header>
-
-        <div class="workflow__grid">
-          <div class="workflow-card">
-            <span class="workflow-card__step">01</span>
-            <h3 class="workflow-card__title">Диагностика и ТЗ</h3>
-            <p class="workflow-card__desc">
-              Фиксируем конечную цель, границы проекта и критерии готовности. Никакой размытой почасовки — только понятный результат.
-            </p>
-          </div>
-
-          <div class="workflow-card">
-            <span class="workflow-card__step">02</span>
-            <h3 class="workflow-card__title">Архитектура и структура данных</h3>
-            <p class="workflow-card__desc">
-              Проектируем структуру данных и логику приложения так, чтобы система выдерживала рост нагрузки (PostgreSQL &amp; Laravel).
-            </p>
-          </div>
-
-          <div class="workflow-card">
-            <span class="workflow-card__step">03</span>
-            <h3 class="workflow-card__title">Поэтапная реализация</h3>
-            <p class="workflow-card__desc">
-              Разработка короткими итерациями с демонстрацией промежуточных результатов. Оплата по схеме 50% предоплата / 50% после приёмки.
-            </p>
-          </div>
-
-          <div class="workflow-card">
-            <span class="workflow-card__step">04</span>
-            <h3 class="workflow-card__title">Тестирование и сдача</h3>
-            <p class="workflow-card__desc">
-              Аудит безопасности OWASP, нагрузочное тестирование, деплой на боевой сервер и передача документации клиенту.
-            </p>
-          </div>
+        <!-- Carousel Navigation Controls -->
+        <div class="carousel__controls">
+          <button type="button" class="carousel__btn" id="carouselPrev" aria-label="Предыдущий проект">
+            <span aria-hidden="true">&#10094;</span>
+          </button>
+          <button type="button" class="carousel__btn" id="carouselNext" aria-label="Следующий проект">
+            <span aria-hidden="true">&#10095;</span>
+          </button>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact Section: Minimalist, clean, direct -->
+    <!-- Compact Contact Banner -->
     <section id="contact" class="contact section">
       <div class="container">
-        <header class="section-header">
-          <span class="section-header__tag">Связь</span>
-          <h2 class="section-header__title">Обсудить аудит или проект</h2>
-          <p class="section-header__desc">
-            Напишите мне в удобный мессенджер — опишите задачу или отправьте ссылку на проект. Я изучу вводные и предложу оптимальный формат решения.
-          </p>
-        </header>
-
-        <div class="contact__card">
-          <h3 class="contact__card-title">Свяжитесь со мной напрямую</h3>
-          <p class="contact__card-desc">
-            Отвечаю оперативно в течение рабочего дня. Консультирую по архитектуре, аудитам и запуску новых проектов:
-          </p>
-
-          <div class="contact__channels">
-            <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" class="contact-channel" aria-label="Написать в Telegram (открывается в новом окне)">
-              <span class="contact-channel__icon" aria-hidden="true">&#10148;</span>
-              <div class="contact-channel__details">
-                <span class="contact-channel__type">Telegram</span>
-                <span class="contact-channel__value">@yourusername</span>
-              </div>
-            </a>
-
-            <a href="mailto:your-email@example.com" class="contact-channel" aria-label="Отправить письмо на электронную почту">
-              <span class="contact-channel__icon" aria-hidden="true">&#9993;</span>
-              <div class="contact-channel__details">
-                <span class="contact-channel__type">Email</span>
-                <span class="contact-channel__value">your-email@example.com</span>
-              </div>
-            </a>
-
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="contact-channel" aria-label="Профиль на GitHub (открывается в новом окне)">
-              <span class="contact-channel__icon" aria-hidden="true">&#9881;</span>
-              <div class="contact-channel__details">
-                <span class="contact-channel__type">GitHub</span>
-                <span class="contact-channel__value">github.com/yourusername</span>
-              </div>
-            </a>
+        <div class="contact-banner">
+          <div class="contact-banner__content">
+            <h2 class="contact-banner__title">Связаться со мной</h2>
           </div>
-
-          <div class="contact__cta-row">
-            <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
-              Написать в Telegram ↗
-            </a>
-            <a href="mailto:your-email@example.com" class="btn btn--outline">
-              Отправить Email ↗
+          <div class="contact-banner__actions">
+            <a href="https://t.me/sen0215" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+              Telegram (Олег) ↗
             </a>
           </div>
         </div>
@@ -630,13 +408,15 @@
   <footer class="footer">
     <div class="container footer__container">
       <div class="footer__copy">
-        &copy; 2026 Fullstack Developer. Веб-приложения под бизнес-задачи.
+        &copy; 2026 Fullstack Developer &bull; Laravel &amp; PostgreSQL
       </div>
       <div class="footer__links">
-        <a href="#hero" class="footer__link">Наверх &uarr;</a>
+        <a href="https://github.com/Totoro212" target="_blank" rel="noopener noreferrer" class="footer__link">GitHub ↗</a>
       </div>
     </div>
   </footer>
 
+  <!-- Lightweight Accessible Carousel Script -->
+  <script src="carousel.js" defer></script>
 </body>
 </html>
