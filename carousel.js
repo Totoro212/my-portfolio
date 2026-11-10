@@ -1,4 +1,4 @@
-/**
+**
  * Lightweight, accessible pure vanilla JS Carousel
  * Works in tandem with CSS Scroll Snap (Progressive Enhancement)
  */
@@ -75,8 +75,12 @@
         const mockup = tab.closest('.project-card__mockup');
         if (!mockup) return;
 
-        mockup.querySelectorAll('.mockup-tab').forEach((t) => t.classList.remove('is-active'));
+        mockup.querySelectorAll('.mockup-tab').forEach((t) => {
+          t.classList.remove('is-active');
+          t.setAttribute('aria-selected', 'false');
+        });
         tab.classList.add('is-active');
+        tab.setAttribute('aria-selected', 'true');
 
         const img = mockup.querySelector('.mockup-image img');
         const link = mockup.querySelector('a.mockup-image');
