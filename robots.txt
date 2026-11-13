@@ -7,3 +7,4 @@ Sitemap: https://quitecodestudio.com/sitemap.xml
 
 # Host declaration
 Host: https://quitecodestudio.com
+
