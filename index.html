@@ -9,14 +9,128 @@
   <!-- Security Headers & Directives -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; base-uri 'self'; form-action 'self' mailto:;">
   <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#2563eb">
 
-  <title>Fullstack-разработчик: Laravel &amp; PostgreSQL | Портфолио</title>
-  <meta name="description" content="Разработка надёжных бэкенд-систем, баз данных PostgreSQL и веб-приложений на Laravel. Отказоустойчивость, чистая архитектура, решение бизнес-задач.">
+  <!-- Primary SEO Meta Tags (High Intent & Commercial Relevance) -->
+  <title>Fullstack-разработчик Laravel &amp; PostgreSQL | Портфолио бэкенд-разработчика</title>
+  <meta name="description" content="Портфолио Fullstack-разработчика: проектирование баз данных PostgreSQL, чистый бэкенд на Laravel 11 / PHP и веб-сервисы под ключ. Кейсы WMS, CRM и REST API.">
+  <meta name="keywords" content="fullstack разработчик laravel, laravel разработчик, бэкенд разработчик postgresql, разработка на laravel, проектирование баз данных postgresql, rest api laravel, услуги laravel разработчика, создание веб сервисов, quite code studio">
+  <meta name="author" content="Олег (Quite Code)">
+  <link rel="canonical" href="https://quitecodestudio.com/">
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Fullstack-разработчик: Laravel &amp; PostgreSQL">
-  <meta property="og:description" content="Проектирование баз данных PostgreSQL, чистый бэкенд на Laravel и быстрые веб-приложения под бизнес-задачи.">
+  <!-- Search Engine Crawlers Directives -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <meta name="yandex" content="index, follow">
+
+  <!-- Open Graph / Telegram / VK / Facebook -->
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Fullstack-разработчик Laravel &amp; PostgreSQL | Портфолио">
+  <meta property="og:description" content="Проектирование баз данных PostgreSQL, чистый бэкенд на Laravel 11 / PHP и быстрые веб-сервисы. Реализованные кейсы и контакты.">
+  <meta property="og:url" content="https://quitecodestudio.com/">
+  <meta property="og:site_name" content="Quite Code Studio">
+  <meta property="og:image" content="https://quitecodestudio.com/assets/wms-landing.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Система складского учёта на Laravel и PostgreSQL">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fullstack-разработчик Laravel &amp; PostgreSQL | Портфолио">
+  <meta name="twitter:description" content="Проектирование баз данных PostgreSQL, чистый бэкенд на Laravel 11 / PHP и быстрые веб-сервисы.">
+  <meta name="twitter:image" content="https://quitecodestudio.com/assets/wms-landing.jpg">
+
+  <!-- Modern Vector Favicon (Crisp in SERP snippets & Retina) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232563eb'/><path d='M11 11L6 16L11 21M21 11L26 16L21 21M18 9L14 23' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+
+  <!-- Structured Data: Schema.org (JSON-LD) for Search Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfilePage",
+        "@id": "https://quitecodestudio.com/#profilepage",
+        "url": "https://quitecodestudio.com/",
+        "name": "Fullstack-разработчик Laravel & PostgreSQL | Портфолио",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://quitecodestudio.com/#website",
+          "url": "https://quitecodestudio.com/",
+          "name": "Quite Code Studio"
+        },
+        "about": {
+          "@id": "https://quitecodestudio.com/#person"
+        },
+        "mainEntity": {
+          "@id": "https://quitecodestudio.com/#person"
+        },
+        "inLanguage": "ru"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://quitecodestudio.com/#person",
+        "name": "Олег",
+        "alternateName": "Quite Code",
+        "jobTitle": "Fullstack-разработчик (Laravel & PostgreSQL)",
+        "url": "https://quitecodestudio.com/",
+        "image": "https://quitecodestudio.com/assets/wms-landing.jpg",
+        "sameAs": [
+          "https://t.me/sen0215",
+          "https://github.com/Totoro212"
+        ],
+        "knowsAbout": [
+          "Laravel",
+          "PostgreSQL",
+          "PHP",
+          "REST API",
+          "Database Architecture",
+          "SQL Query Optimization",
+          "Fullstack Development",
+          "Blade",
+          "Tailwind CSS"
+        ],
+        "description": "Fullstack-разработчик. Специализация: бэкенд на Laravel 11, проектирование баз данных PostgreSQL, разработка защищённых REST API и архитектура веб-приложений."
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://quitecodestudio.com/#projects-list",
+        "name": "Реализованные проекты и кейсы",
+        "itemListElement": [
+          {
+            "@type": "CreativeWork",
+            "position": 1,
+            "name": "Склад QR: Система складского учёта и маркировки",
+            "description": "Веб-сервис складского учёта на Laravel и PostgreSQL с браузерным QR-сканером камерой, движением номенклатуры и аналитикой остатков.",
+            "image": "https://quitecodestudio.com/assets/wms-landing.jpg"
+          },
+          {
+            "@type": "CreativeWork",
+            "position": 2,
+            "name": "DMS Logistics: Доставка и курьерская служба",
+            "description": "Система логистики для интернет-магазина: распределение заказов курьерам, расчёт комиссий и трекинг доставок.",
+            "image": "https://quitecodestudio.com/assets/dms-order.png"
+          },
+          {
+            "@type": "CreativeWork",
+            "position": 3,
+            "name": "ANSTK: Каталог картин с панелью управления",
+            "description": "Веб-каталог с административной панелью, модерацией карточек товаров и мультиязычной базой данных.",
+            "image": "https://quitecodestudio.com/assets/anstk-admin.png"
+          },
+          {
+            "@type": "CreativeWork",
+            "position": 4,
+            "name": "ARISE Tracker: PWA-трекер тренировок",
+            "description": "Автономное мобильное веб-приложение для фиксации силовых показателей, подходов и спортивного прогресса.",
+            "image": "https://quitecodestudio.com/assets/arise-workout.jpg"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -93,7 +207,7 @@
           </h1>
 
           <p class="hero__subtitle">
-            Разрабатываю веб-приложения на Laravel, проектирую базы данных PostgreSQL. Чистая архитектура без лишней сложности.
+            Разрабатываю масштабируемый бэкенд на Laravel и проектирую отказоустойчивые базы данных PostgreSQL. Чистая архитектура, разработка REST API и веб-сервисов под ключ.
           </p>
 
           <div class="hero__actions">
@@ -427,7 +541,10 @@
       <div class="container">
         <div class="contact-banner">
           <div class="contact-banner__content">
-            <h2 class="contact-banner__title">Связаться со мной</h2>
+            <h2 class="contact-banner__title">Обсудить проект или сотрудничество</h2>
+            <p class="contact-banner__desc">
+              Открыт к предложениям по разработке бэкенда на Laravel, проектированию баз данных PostgreSQL и реализации веб-сервисов под ключ.
+            </p>
           </div>
           <div class="contact-banner__actions">
             <a href="https://t.me/sen0215" target="_blank" rel="noopener noreferrer" class="btn btn--primary">

@@ -1,0 +1,9 @@
+# robots.txt for https://quitecodestudio.com/
+User-agent: *
+Allow: /
+
+# Sitemap index
+Sitemap: https://quitecodestudio.com/sitemap.xml
+
+# Host declaration
+Host: https://quitecodestudio.com

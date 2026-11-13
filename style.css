@@ -1371,6 +1371,13 @@ ul, ol {
   letter-spacing: -0.02em;
 }
 
+.contact-banner__desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-top: 0.4rem;
+}
+
 .contact-banner__actions {
   display: flex;
   align-items: center;
@@ -1389,6 +1396,9 @@ ul, ol {
   }
   .contact-banner__content {
     max-width: 100%;
+  }
+  .contact-banner__desc {
+    font-size: 0.88rem;
   }
   .contact-banner__actions {
     width: 100%;
