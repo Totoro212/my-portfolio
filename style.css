@@ -1041,7 +1041,7 @@ ul, ol {
   overflow: hidden;
   text-overflow: ellipsis;
   min-width: 0;
-  max-width: 80px;
+  max-width: 140px;
 }
 
 .mockup-tabs {
@@ -1290,6 +1290,10 @@ ul, ol {
   .project-card__links {
     padding-top: 0.85rem;
   }
+  .project-card__link {
+    font-size: 0.74rem;
+    padding: 0.25rem 0.55rem;
+  }
   .carousel__btn {
     width: 42px;
     height: 42px;
@@ -1320,6 +1324,8 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   border-top: 1px solid var(--border-light);
   padding-top: 1.1rem;
   margin-top: auto;
@@ -1337,6 +1343,29 @@ ul, ol {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+}
+
+.project-card__link {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  background-color: var(--accent-light);
+  border: 1px solid var(--accent-border);
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: auto;
+  transition: all var(--trans-fast);
+}
+
+.project-card__link:hover {
+  background-color: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+  transform: translateY(-1px);
 }
 
 /* --------------------------------------------------------------------------
